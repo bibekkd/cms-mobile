@@ -1,6 +1,6 @@
 import { useCallback, useMemo } from "react"
 import { useNavigation } from "@react-navigation/core"
-import { InfoIcon, LogOutIcon, ShieldIcon } from "lucide-react-native"
+import { SettingsIcon, FolderCodeIcon, CircleUserIcon, InfoIcon, LogOutIcon, ShieldIcon } from "lucide-react-native"
 
 import { closeBottomSheet, openBottomSheet } from "app/utils"
 import { RouteName } from "app/constants"
@@ -17,6 +17,14 @@ export const useAccountScreenItem = () => {
     },
     [navigation],
   )
+
+  const handleAccountDetailsPress = useCallback(() => {
+    navigation.navigate(RouteName.AccountDetails)
+  }, [])
+
+  const handleProjectsPress = useCallback(() => {
+    navigation.navigate(RouteName.ProjectsScreen)
+  }, [])
 
   const handleLogoutConfirm = useCallback(() => {
     closeBottomSheet()
@@ -35,6 +43,11 @@ export const useAccountScreenItem = () => {
 
   const accountItems = useMemo(
     () => [
+      {
+        icon: FolderCodeIcon,
+        title: "Projects",
+        onPress: handleProjectsPress,
+      },
       {
         icon: InfoIcon,
         title: "Terms & Conditions",

@@ -24,6 +24,7 @@ export enum RouteName {
   VideoPlayer = "VideoPlayer",
   Webview = "Webview",
   Welcome = "Welcome",
+  ProjectsScreen = "Projects "
 }
 
 export const TAB_ROUTES: Array<{

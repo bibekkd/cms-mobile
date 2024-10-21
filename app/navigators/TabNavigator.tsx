@@ -16,6 +16,7 @@ export type TabParamList = {
   History: undefined
   MyCourses: undefined
   Storybook: undefined
+  ProjectsScreen: undefined
 }
 
 /**
@@ -76,7 +77,7 @@ export function TabNavigator() {
       screenOptions={{
         headerShown: false,
         tabBarHideOnKeyboard: true,
-        tabBarStyle: [$tabBar, { height: bottom + 50 }],
+        tabBarStyle: [$tabBar, { height: bottom + 65 }],
         tabBarActiveTintColor: colors.content.brand,
         tabBarInactiveTintColor: colors.content.secondary,
         tabBarLabelStyle: $tabBarLabel,
@@ -92,9 +93,10 @@ const $tabBar: ViewStyle = {
   backgroundColor: colors.background.secondary,
   borderTopColor: colors.border.default,
   borderTopWidth: 1,
+  paddingBottom: 10,
   // TODO: Can make an issue for this [#issue]
-  // borderTopRightRadius: spacing.md,
-  // borderTopLeftRadius: spacing.md,
+  //borderTopRightRadius: spacing.md,
+  //borderTopLeftRadius: spacing.md,
 }
 
 const $tabBarItem: ViewStyle = {

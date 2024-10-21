@@ -69,6 +69,7 @@ const AppStack = observer(function AppStack() {
       <Stack.Screen name={RouteName.Storybook} component={Screens.StorybookScreen} />
       <Stack.Screen name={RouteName.VideoPlayer} component={Screens.VideoPlayerScreen} />
       <Stack.Screen name={RouteName.Webview} component={Screens.WebviewScreen} />
+      <Stack.Screen name={RouteName.ProjectsScreen} component={Screens.ProjectsScreen} />
     </Stack.Navigator>
   )
 })
