@@ -77,7 +77,7 @@ export function TabNavigator() {
       screenOptions={{
         headerShown: false,
         tabBarHideOnKeyboard: true,
-        tabBarStyle: [$tabBar, { height: bottom + 65 }],
+        tabBarStyle: [$tabBar, { height: bottom + 50 }],
         tabBarActiveTintColor: colors.content.brand,
         tabBarInactiveTintColor: colors.content.secondary,
         tabBarLabelStyle: $tabBarLabel,
@@ -93,7 +93,7 @@ const $tabBar: ViewStyle = {
   backgroundColor: colors.background.secondary,
   borderTopColor: colors.border.default,
   borderTopWidth: 1,
-  paddingBottom: 10,
+  
   // TODO: Can make an issue for this [#issue]
   //borderTopRightRadius: spacing.md,
   //borderTopLeftRadius: spacing.md,
